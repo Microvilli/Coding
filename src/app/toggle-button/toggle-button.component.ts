@@ -15,28 +15,32 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 })
 export class ToggleButtonComponent implements ControlValueAccessor {
 
-
   @Input() childButtons: string [];
   onChange: (button: string) => void;
+  onTouched: () => void;
   selectedButton: string;
+  disabled: boolean;
 
   constructor() { }
-
 
   registerOnChange(fn: any): void {
     this.onChange = fn;
   }
 
   registerOnTouched(fn: any): void {
+    this.onTouched = fn;
   }
 
   setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled;
   }
 
   writeValue(value: string): void {
+    this.selectedButton = value;
   }
 
   onButton(button: string) {
+    this.onChange(button);
     this.selectedButton = button;
   }
 }

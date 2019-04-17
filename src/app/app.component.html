@@ -6,6 +6,6 @@
   <h1>Dirty : {{ form.get('button').dirty}}</h1>
   <h1>Error : {{ form.get('button').hasError('required')}}</h1>
 
-<app-toggle-button [childButtons] = "statements"  (click)="onSub()" formControlName="button"></app-toggle-button>
+<app-toggle-button [childButtons] = "statements" formControlName="button"></app-toggle-button>
 
 </form>

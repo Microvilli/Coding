@@ -1,8 +1,16 @@
-<div>
-  <div
-    *ngFor="let button of childButtons"
-    [ngStyle]="{'background-color': selectedButton === button ? 'lightgrey' : ''}"
-    (click)="onButton(button); onChange(button)" > {{button}}
-  </div>
-</div>
+<!--<div>-->
+  <!--<div-->
+    <!--*ngFor="let button of childButtons"-->
+    <!--[ngStyle]="{'background-color': selectedButton === button ? 'lightgrey' : ''}"-->
+    <!--(click)="onButton(button); onChange(button)" > {{button}}-->
+  <!--</div>-->
+<!--</div>-->
 
+
+<button
+  *ngFor="let button of childButtons"
+  [ngStyle]="{'background-color': selectedButton === button ? 'lightgrey' : ''}"
+  (click)="onButton(button);" type="button"
+  [attr.disabled]="disabled">
+  {{button}}
+</button>

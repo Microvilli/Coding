@@ -1,15 +1,27 @@
-div{
-  display: flex;
-  justify-content: center;
+//div{
+//  display: flex;
+//  justify-content: center;
+//
+//  div{
+//    border: 1px solid gainsboro;
+//    padding: 0.5rem;
+//    z-index: 100;
+//  }
+//
+//  div:hover{
+//    background-color: lightgray;
+//    cursor: pointer;
+//  }
+//}
 
-  div{
-    border: 1px solid gainsboro;
-    padding: 0.5rem;
-    z-index: 100;
-  }
-
-  div:hover{
-    background-color: lightgray;
-    cursor: pointer;
-  }
+button{
+  font-size: large;
+  background: no-repeat;
+  padding: 0.5rem;
+  cursor: pointer;
 }
+button:hover{
+  background-color: lightgray;
+}
+
+button:focus {outline:0;}
