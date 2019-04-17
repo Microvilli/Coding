@@ -1,0 +1,15 @@
+div{
+  display: flex;
+  justify-content: center;
+
+  div{
+    border: 1px solid gainsboro;
+    padding: 0.5rem;
+    z-index: 100;
+  }
+
+  div:hover{
+    background-color: lightgray;
+    cursor: pointer;
+  }
+}
