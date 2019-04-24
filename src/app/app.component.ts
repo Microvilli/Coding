@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {GithubService} from './services/github.service';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +16,23 @@ export class AppComponent{
     'Hater',
   ];
 
+  profile: any;
+  repos: any;
+
   form = new FormGroup({
     button: new FormControl(''),
   });
 
-  constructor() {
+  constructor(private gitHubService: GithubService) {
+    this.gitHubService.getProFileInfo().subscribe(profile => {
+      console.log(profile);
+      this.profile = profile;
+    });
+
+    this.gitHubService.getProfileRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    });
   }
 
   onSub() {

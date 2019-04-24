@@ -9,3 +9,22 @@
 <app-toggle-button [childButtons] = "statements" formControlName="button"></app-toggle-button>
 
 </form>
+
+
+<div *ngIf="profile">
+  <div>
+    {{profile.login}}
+  </div>
+  
+  <img src="{{profile.avatar_url}}">
+
+  <div>
+    <h1>Repos</h1>
+    <div *ngFor="let repo of repos">
+      <p>
+        name: {{repo.name}},
+        <a href="{{repo.html_url}}" target="_blank">View</a>
+      </p>
+    </div>
+  </div>
+</div>
