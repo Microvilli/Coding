@@ -1,0 +1,7 @@
+<main [@dialog] *ngIf="visible">
+  <button (click)="close()"></button>
+  <ng-content></ng-content>
+</main>
+
+<div *ngIf="visible" (click)="close()"></div>
+

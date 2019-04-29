@@ -9,6 +9,7 @@ import {GithubService} from './services/github.service';
 })
 export class AppComponent{
   title = 'coding';
+  test = false;
   statements = [
     'Expert',
     'Advanced',
@@ -35,7 +36,16 @@ export class AppComponent{
     });
   }
 
+  open() {
+    this.test = true;
+    console.log(this.test);
+  }
+
   onSub() {
     console.log(this.form);
+  }
+
+  onTest() {
+    console.log('läuft');
   }
 }

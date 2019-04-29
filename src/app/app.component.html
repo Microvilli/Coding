@@ -1,3 +1,14 @@
+<button (click)="showDialog = !showDialog" class="btn">Open</button>
+
+
+<app-app-dialog [(visible)]="showDialog">
+  <h1>Test</h1>
+</app-app-dialog>
+
+
+
+
+
 
 <form [formGroup]="form" (ngSubmit)="onSub()">
 
@@ -28,3 +39,7 @@
     </div>
   </div>
 </div>
+
+<button (click)="open()">Öffne Dialog</button>
+
+<dialog *ngIf="test === true">Inhalt überarbeiten</dialog>
