@@ -1,13 +1,17 @@
+<form (ngSubmit)="onRegister()" [formGroup]="myForm">
+  <input placeholder="Username" formControlName="username">
+  <input placeholder="Password" formControlName="password">
+  <button type="submit">Registrieren</button>
+</form>
+
+<hr>
+
 <button (click)="showDialog = !showDialog" class="btn">Open</button>
 
 
 <app-app-dialog [(visible)]="showDialog">
   <h1>Test</h1>
 </app-app-dialog>
-
-
-
-
 
 
 <form [formGroup]="form" (ngSubmit)="onSub()">
